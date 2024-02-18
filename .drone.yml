@@ -1,4 +1,4 @@
-﻿kind: pipeline
+kind: pipeline
 type: docker
 name: integration
 
@@ -14,7 +14,7 @@ steps:
       - dotnet test
 
   - name: sonarqube
-    image: sonar source/sonar-scanner-cli:latest
+    image: sonarsource/sonar-scanner-cli:latest
     environment:
       SONAR_HOST_URL: http://sonar.setgo.dk:9000
       SONAR_LOGIN: sqp_25aaeaf94c9fa3a4effc9a39a5ed0a6e14acf867
