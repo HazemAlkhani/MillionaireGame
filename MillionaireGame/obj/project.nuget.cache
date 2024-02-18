@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "iNCKt2QwjSYpqPxtZYkFwnhTPL1D4K3iMghFY1jo3r1q+ievDXffNqEy5bra7ck8Wm/DU71ZkYx3d408OU+BDw==",
+  "dgSpecHash": "bTZ3OeQgBGlduMBaUSijX0Sujl8olxnw+ClICn+IKRDhyxC8ccDaPgG1MhYcAY/S63Uknp+ebQ33y4lJa8yE6w==",
   "success": true,
   "projectFilePath": "C:\\Program Files\\Java\\jdk-19\\MillionaireGame\\MillionaireGame\\MillionaireGame.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\hazem\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
     "C:\\Users\\hazem\\.nuget\\packages\\nunit\\4.0.1\\nunit.4.0.1.nupkg.sha512",
     "C:\\Users\\hazem\\.nuget\\packages\\nunit3testadapter\\4.5.0\\nunit3testadapter.4.5.0.nupkg.sha512",
     "C:\\Users\\hazem\\.nuget\\packages\\xunit\\2.7.0\\xunit.2.7.0.nupkg.sha512",

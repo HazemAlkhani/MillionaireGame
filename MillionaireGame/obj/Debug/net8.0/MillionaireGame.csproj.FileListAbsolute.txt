@@ -56,3 +56,4 @@ C:\Program Files\Java\jdk-19\MillionaireGame\MillionaireGame\bin\Debug\net8.0\xu
 C:\Program Files\Java\jdk-19\MillionaireGame\MillionaireGame\bin\Debug\net8.0\xunit.assert.dll
 C:\Program Files\Java\jdk-19\MillionaireGame\MillionaireGame\bin\Debug\net8.0\xunit.core.dll
 C:\Program Files\Java\jdk-19\MillionaireGame\MillionaireGame\bin\Debug\net8.0\xunit.execution.dotnet.dll
+C:\Program Files\Java\jdk-19\MillionaireGame\MillionaireGame\bin\Debug\net8.0\Newtonsoft.Json.dll

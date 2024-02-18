@@ -8,8 +8,8 @@ namespace MillionaireGame
         static void Main(string[] args)
         {
          
-            List<Question> competitionQuestions = Questions.GetCompetitionQuestions();
-            List<Question> helpQuestions = Questions.GetHelpQuestions();
+            List<Question?> competitionQuestions = Questions.GetCompetitionQuestions();
+            List<Question?> helpQuestions = Questions.GetHelpQuestions();
             GameEngine gameEngine = new GameEngine(competitionQuestions, helpQuestions);
 
            

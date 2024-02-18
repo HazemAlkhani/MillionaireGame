@@ -1,19 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 
 namespace MillionaireGame
 {
     public class GameEngine
     {
-        private List<Question> questions;
-        private List<Question> helpQuestions;
+        private List<Question?> questions;
+        private List<Question?> helpQuestions;
         private int currentQuestionIndex = 0;
         private int currentBalance = 0;
         private int earnedBalance = 0;
         private Player player;
 
-        public GameEngine(List<Question> competitionQuestions, List<Question> helpQuestions)
+        public GameEngine(List<Question?> competitionQuestions, List<Question?> helpQuestions)
         {
             this.questions = competitionQuestions;
             this.helpQuestions = helpQuestions;
@@ -29,10 +30,10 @@ namespace MillionaireGame
             {
                 DisplayBalance();
 
-                Question currentQuestion = GetNextQuestion();
+                Question? currentQuestion = GetNextQuestion();
                 DisplayQuestion(currentQuestion);
 
-                string choice = GetUserChoice();
+                string? choice = GetUserChoice();
                 if (choice == "h")
                 {
                     if (player.LifelinesRemaining > 0)
@@ -53,6 +54,7 @@ namespace MillionaireGame
                 }
                 else
                 {
+                    Debug.Assert(choice != null, nameof(choice) + " != null");
                     bool isCorrect = CheckAnswer(currentQuestion, int.Parse(choice) - 1);
                     if (!isCorrect)
                     {
@@ -85,7 +87,7 @@ namespace MillionaireGame
             Console.WriteLine($"Earned Balance: {earnedBalance}");
         }
 
-        public Question GetNextQuestion()
+        public Question? GetNextQuestion()
         {
             if (currentQuestionIndex < questions.Count)
             {
@@ -95,7 +97,7 @@ namespace MillionaireGame
             return null;
         }
 
-        private void DisplayQuestion(Question question)
+        private void DisplayQuestion(Question? question)
         {
             if (question != null)
             {
@@ -107,10 +109,10 @@ namespace MillionaireGame
             }
         }
 
-        private string GetUserChoice()
+        private string? GetUserChoice()
         {
             Console.Write("Your choice (1-4, H for Help, Withdraw to stop): ");
-            return Console.ReadLine().Trim().ToLower();
+            return Console.ReadLine()?.Trim().ToLower();
         }
 
         private void UseHelp()
@@ -123,7 +125,7 @@ namespace MillionaireGame
             }
         }
 
-        private bool CheckAnswer(Question currentQuestion, int choice)
+        private bool CheckAnswer(Question? currentQuestion, int choice)
         {
             if (currentQuestion != null)
             {

@@ -23,9 +23,9 @@ namespace MillionaireGame
     {
         static Random random = new Random();
 
-       public static List<Question> GetCompetitionQuestions()
+       public static List<Question?> GetCompetitionQuestions()
 {
-    return new List<Question>
+    return new List<Question?>
     {
         new Question("Hvad er hovedstaden i Danmark?", 
             new List<string> { "Stockholm", "København", "Oslo", "Helsinki" }, 
@@ -79,9 +79,9 @@ namespace MillionaireGame
 }
 
 
-        public static List<Question> GetHelpQuestions()
+        public static List<Question?> GetHelpQuestions()
         {
-            return new List<Question>
+            return new List<Question?>
             {
                 new Question("Hvad er 1 + 1?", new List<string> { "1", "2", "3", "4" }, random.Next(0, 4), 500),
                 new Question("Hvilket dyr siger 'vuf'?", new List<string> { "Kat", "Hund", "Giraf", "Elefant" }, random.Next(0, 4), 1000),
