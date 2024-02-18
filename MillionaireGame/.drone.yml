@@ -12,3 +12,11 @@ steps:
     image: mcr.microsoft.com/dotnet/sdk
     commands:
       - dotnet test
+
+  - name: sonarqube
+    image: sonar source/sonar-scanner-cli:latest
+    environment:
+      SONAR_HOST_URL: http://sonar.setgo.dk:9000
+      SONAR_LOGIN: sqp_25aaeaf94c9fa3a4effc9a39a5ed0a6e14acf867
+    commands:
+      - sonar-scanner
