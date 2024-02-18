@@ -3,20 +3,12 @@ type: docker
 name: integration
 
 steps:
-  - name: build
-    image: mcr.microsoft.com/dotnet/sdk
+  - name: code-analysis
+    image: boulundeasv/donet-sdk-with-java
     commands:
+      - dotnet sonarscanner begin /k:"easv-devops_MillionaireGame_AY24ZWJsEVvRW2O60EAM" /d:sonar.host.url="http://sonar.setgo.dk:9000"  /d:sonar.token="sqp_22a61d3ebfafb63728d3a2eedf4afdcb6437ed72"
       - dotnet build
+      - dotnet sonarscanner end /d:sonar.token="sqp_22a61d3ebfafb63728d3a2eedf4afdcb6437ed72"
 
-  - name: test
-    image: mcr.microsoft.com/dotnet/sdk
-    commands:
-      - dotnet test
+  
 
-  - name: sonarqube
-    image: sonarsource/sonar-scanner-cli:latest
-    environment:
-      SONAR_HOST_URL: http://sonar.setgo.dk:9000
-      SONAR_LOGIN: sqp_25aaeaf94c9fa3a4effc9a39a5ed0a6e14acf867
-    commands:
-      - sonar-scanner
