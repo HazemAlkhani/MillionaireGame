@@ -9,7 +9,7 @@ steps:
       - dotnet tool install --global dotnet-sonarscanner
 
   - name: code-analysis
-    image: boulundeasv/donet-sdk-with-java
+    image: mcr.microsoft.com/dotnet/sdk
     commands:
       - dotnet sonarscanner begin /k:"easv-devops_MillionaireGame_AY24ZWJsEVvRW2O60EAM" /d:sonar.host.url="http://sonar.setgo.dk:9000"  /d:sonar.token="sqp_22a61d3ebfafb63728d3a2eedf4afdcb6437ed72"
       - dotnet build
