@@ -35,16 +35,16 @@
         {
           "ruleId": "CA1822",
           "level": "note",
-          "message": "Member 'DisplayQuestion' does not access instance data and can be marked as static",
+          "message": "Member 'GetUserChoice' does not access instance data and can be marked as static",
           "locations": [
             {
               "resultFile": {
                 "uri": "file:///C:/Program%20Files/Java/jdk-19/MillionaireGame/MillionaireGame/GameEngine.cs",
                 "region": {
-                  "startLine": 100,
-                  "startColumn": 22,
-                  "endLine": 100,
-                  "endColumn": 37
+                  "startLine": 112,
+                  "startColumn": 25,
+                  "endLine": 112,
+                  "endColumn": 38
                 }
               }
             }
@@ -56,16 +56,16 @@
         {
           "ruleId": "CA1822",
           "level": "note",
-          "message": "Member 'GetUserChoice' does not access instance data and can be marked as static",
+          "message": "Member 'DisplayQuestion' does not access instance data and can be marked as static",
           "locations": [
             {
               "resultFile": {
                 "uri": "file:///C:/Program%20Files/Java/jdk-19/MillionaireGame/MillionaireGame/GameEngine.cs",
                 "region": {
-                  "startLine": 112,
-                  "startColumn": 25,
-                  "endLine": 112,
-                  "endColumn": 38
+                  "startLine": 100,
+                  "startColumn": 22,
+                  "endLine": 100,
+                  "endColumn": 37
                 }
               }
             }
